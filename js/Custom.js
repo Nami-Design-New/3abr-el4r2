@@ -1,19 +1,4 @@
 $(document).ready(function () {
-  // navbar hide in scroll down
-  // var prevScrollpos = window.pageYOffset;
-  // window.onscroll = function () {
-  //   var currentScrollPos = window.pageYOffset;
-  //   if (prevScrollpos > currentScrollPos) {
-  //     $("header").css({
-  //       top: "0px",
-  //     });
-  //   } else {
-  //     $("header").css({
-  //       top: "-100%",
-  //     });
-  //   }
-  //   prevScrollpos = currentScrollPos;
-  // };
   //navbar ainmation
   $(window).scroll(function () {
     var appScroll = $(document).scrollTop();
@@ -39,7 +24,49 @@ $(document).ready(function () {
     },
   });
 
- 
+  // services slider
+  var servicesSlider = new Swiper(".servicesSlider", {
+    navigation: {
+      nextEl: ".servicesSliderNext",
+      prevEl: ".servicesSliderPrev",
+    },
+    pagination: {
+      el: ".servicesSlidePagination",
+      type: "fraction",
+    },
+    loop: true,
+    spaceBetween: 12,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // slidesPerView: "auto",
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      340: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 4,
+      },
+   
+    },
+    
+  });
+  $(".servicesSlider").hover(
+    function () {
+      this.swiper.autoplay.stop();
+    },
+    function () {
+      this.swiper.autoplay.start();
+    }
+  );
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
