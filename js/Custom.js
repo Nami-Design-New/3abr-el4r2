@@ -55,9 +55,7 @@ $(document).ready(function () {
       991: {
         slidesPerView: 4,
       },
-   
     },
-    
   });
   $(".servicesSlider").hover(
     function () {
@@ -67,6 +65,41 @@ $(document).ready(function () {
       this.swiper.autoplay.start();
     }
   );
+
+  // testimonials
+  var swiper = new Swiper(".testimonialsSlider", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    slidesPerView: "auto",
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+    },
+    observer: true,
+    observeParents: true,
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -127,6 +160,25 @@ $(document).ready(function () {
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
+
+  // validation
+  (function () {
+    "use strict";
+    var forms = document.querySelectorAll(".needs-validation");
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  })();
 });
 // /////////////////////////////
 // /////////////////////////////
