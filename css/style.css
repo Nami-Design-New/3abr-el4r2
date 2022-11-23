@@ -876,16 +876,16 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   padding: 50px 0;
 }
 .requirements .requirement {
-  background: linear-gradient(#2c9193, #13566e);
+  background: linear-gradient(-45deg, #2c9193, #00595b);
   height: 100%;
   padding: 30px 20px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 .requirements .requirement h4 {
   font-weight: bold;
-  margin-bottom: 10px;
   color: #ffffff;
 }
 .requirements .requirement h6 {
@@ -897,12 +897,13 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 .requirements .requirement ul {
   display: flex;
-  padding: 20px 0;
+  padding: 0;
   margin: 0;
   margin-top: auto;
   list-style: none;
-  gap: 20px;
+  gap: 32px 20px;
   flex-wrap: wrap;
+  padding-top: 16px;
 }
 .requirements .requirement ul li {
   display: flex;
@@ -1056,7 +1057,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 
 .faq {
-  padding: 70px 0;
+  padding: 40px 0;
 }
 .faq .accordion .accordion-button:not(.collapsed) {
   background-color: #2c9193;
@@ -1079,7 +1080,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 
 .banner {
-  background: linear-gradient(60deg, rgba(44, 145, 147, 0.4274509804) 10%, #2c9193 90%), url(../img/about.jpg);
+  background: linear-gradient(0deg, rgba(44, 145, 147, 0.4274509804) 10%, rgba(44, 145, 147, 0.9058823529) 90%), url(../img/about.jpg);
   background-size: cover;
   padding-top: 180px;
   padding-bottom: 50px;
@@ -1128,6 +1129,70 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 .banner ul li a {
   color: #ffffff;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.inputField label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.inputField label i {
+  font-size: 24px;
+  color: #2c9193;
+}
+.inputField input {
+  min-height: 56px;
+}
+.inputField ::-moz-placeholder {
+  font-size: 13px;
+}
+.inputField :-ms-input-placeholder {
+  font-size: 13px;
+}
+.inputField ::placeholder {
+  font-size: 13px;
+}
+
+.trackOrder {
+  padding: 50px 0;
+}
+.trackOrder img {
+  height: 300px;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .trackOrder img {
+    height: 200px;
+  }
+}
+.trackOrder form {
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.formWimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .formWimg {
+    flex-direction: column;
+  }
 }
 
 /* Tablet device :768px. */
