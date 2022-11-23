@@ -1,10 +1,6 @@
-@font-face {
-  font-family: montserrat;
-  font-display: swap;
-  src: url(../webfonts/montserrat-Arabic-Regular.woff);
-}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap");
 * {
-  font-family: "montserrat", sans-serif;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -30,7 +26,7 @@
 }
 
 :target {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 50px;
 }
 
 a {
@@ -309,8 +305,7 @@ span.select2.select2-container.select2-container--default {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -381,7 +376,6 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 
 .mainSlider {
   position: relative;
-  margin-top: -86px;
 }
 .mainSlider .mainSliderContainer {
   width: 100%;
@@ -664,7 +658,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   width: 100%;
   padding: 16px;
   border-radius: 8px;
-  background-color: #91b9ba;
+  background-color: #2c9193;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -684,6 +678,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 .aboutUs .features .feature p {
   transition: all 0.3s ease-in-out;
+  color: #ffffff;
 }
 .aboutUs .features .feature::before {
   content: "";
@@ -697,8 +692,6 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
   z-index: -1;
-}
-.aboutUs .features .feature:hover {
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
 }
 .aboutUs .features .feature:hover p {
@@ -764,7 +757,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   margin-bottom: 8px;
   transition: all 0.3s ease-in-out;
 }
-.services .service h3 {
+.services .service h4 {
   font-weight: bold;
   color: #2c9193;
   transition: all 0.3s ease-in-out;
@@ -776,7 +769,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 .services .service:hover img {
   opacity: 1;
 }
-.services .service:hover h3 {
+.services .service:hover h4 {
   color: #ffffff;
 }
 .services .service:hover p {
@@ -956,21 +949,22 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 .testimonials .singleItem .itemComment:before {
   top: 100%;
-  right: 11%;
+  right: 50%;
   content: " ";
-  height: 0;
-  width: 0;
+  height: 30px;
+  width: 30px;
   position: absolute;
+  background-color: #f3f3f9;
   bottom: -20px;
-  border-color: #f3f3f9 transparent transparent;
-  border-style: solid;
-  border-width: 20px 35px 32px 10px;
-  transform: scaleX(-1);
+  border-radius: 4px;
+  transform: scaleX(-1) translateX(-50%) translateY(-50%) rotate(45deg);
 }
 .testimonials .singleItem .clientInfo {
   display: flex;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px;
+  flex-direction: column;
+  gap: 8px;
 }
 .testimonials .singleItem .clientInfo img {
   display: block;
@@ -985,57 +979,40 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   text-transform: uppercase;
   color: #2c9193;
   font-weight: bold;
-  margin-right: 16px;
 }
 
-.contactForm {
+.contactUs {
   padding: 70px 0;
 }
 @media (max-width: 768px) {
-  .contactForm {
+  .contactUs {
     padding: 40px 0;
   }
 }
-.contactForm .sideTitle {
-  justify-content: center;
-  font-weight: bold;
-}
-@media (max-width: 768px) {
-  .contactForm .sideTitle {
-    text-align: center;
-    padding-right: 0;
-    padding-top: 50px;
-  }
-  .contactForm .sideTitle::before {
-    content: "";
-    top: 0;
-    right: calc(50% - 15px);
-  }
-}
-.contactForm form {
+.contactUs form {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
-  background-color: rgba(255, 255, 255, 0.6392156863);
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 16px;
   position: relative;
 }
-.contactForm form .form-control {
+.contactUs form .form-control {
   background-color: transparent;
   border-color: rgba(29, 113, 184, 0.2784313725);
 }
-.contactForm form .form-label {
+.contactUs form .form-label {
   color: #555;
 }
-.contactForm form .form-label i {
+.contactUs form .form-label i {
   color: #91b9ba;
 }
-.contactForm .contactInfo {
+.contactUs .contactInfo {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.contactForm .contactInfo .info {
+.contactUs .contactInfo .info {
   background-color: #ffffff;
   margin: 8px 0;
   padding: 20px;
@@ -1045,7 +1022,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   transition: all 0.3s ease-in-out;
   position: relative;
 }
-.contactForm .contactInfo .info i {
+.contactUs .contactInfo .info i {
   min-width: 70px;
   height: 70px;
   display: flex;
@@ -1057,20 +1034,20 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   color: #91b9ba;
   transition: all 0.3s ease-in-out;
 }
-.contactForm .contactInfo .info h6 {
+.contactUs .contactInfo .info h6 {
   font-weight: bold;
   color: #777;
   margin-bottom: 8px;
   font-size: small;
 }
-.contactForm .contactInfo .info:hover {
+.contactUs .contactInfo .info:hover {
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
   z-index: 2;
 }
-.contactForm .contactInfo .info:hover i {
+.contactUs .contactInfo .info:hover i {
   background-color: rgba(29, 113, 184, 0.1882352941);
 }
-.contactForm .googleMap {
+.contactUs .googleMap {
   width: 100%;
   height: 100%;
   border-radius: 16px;
@@ -1078,34 +1055,81 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   min-height: 250px;
 }
 
-/* PC device :991px. */
-@media (min-width: 991px) {
-  body {
-    font-size: 14px !important;
-  }
-  h1 {
-    font-size: 26px !important;
-  }
-  h2 {
-    font-size: 24px !important;
-  }
-  h3 {
-    font-size: 20px !important;
-  }
-  h4 {
-    font-size: 18px !important;
-  }
-  h5 {
-    font-size: 16px !important;
-  }
-  h6 {
-    font-size: 15px !important;
-  }
-  a,
-p {
-    font-size: 14px !important;
+.faq {
+  padding: 70px 0;
+}
+.faq .accordion .accordion-button:not(.collapsed) {
+  background-color: #2c9193;
+  color: #ffffff;
+  box-shadow: none !important;
+}
+.faq .accordion .accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+}
+.faq .accordion ul {
+  list-style: auto;
+  margin: 0;
+}
+.faq .accordion ul li {
+  margin-bottom: 20px;
+  color: #777;
+}
+.faq .accordion p {
+  color: #777;
+}
+
+.banner {
+  background: linear-gradient(60deg, rgba(44, 145, 147, 0.4274509804) 10%, #2c9193 90%), url(../img/about.jpg);
+  background-size: cover;
+  padding-top: 180px;
+  padding-bottom: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+.banner h1 {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 40px !important;
+}
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 30px !important;
   }
 }
+.banner ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+.banner ul li {
+  padding: 10px 20px;
+  padding-left: 15px;
+  position: relative;
+}
+.banner ul li:last-child::after {
+  display: none;
+}
+.banner ul li::after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  left: -5px;
+  top: calc(50% - 1px);
+}
+.banner ul li a {
+  color: #ffffff;
+}
+
 /* Tablet device :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Global */
