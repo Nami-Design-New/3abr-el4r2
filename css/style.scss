@@ -4,14 +4,20 @@ $gold: #ffd700;
 $white-color: #ffffff;
 $black-color: #231f20;
 $body-color: #f3f3f9;
-$text-color: #777777;
+$text-color: #555555;
 $transition: all 0.3s ease-in-out;
 $shadow: 0px 2px 4px #00000020;
 $BigShadow: 0px 8px 24px #00000020;
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap");
+@font-face {
+  font-family: SF_Regular;
+  font-display: swap;
+  src: url(../font/SF_Regular.ttf);
+}
+// @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap");
 * {
-  font-family: "IBM Plex Sans Arabic", sans-serif;
+  // font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-family: "SF_Regular", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -39,6 +45,7 @@ $BigShadow: 0px 8px 24px #00000020;
 a {
   text-decoration: none;
   transition: $transition !important;
+  color: $secondColor;
 }
 a:hover {
   text-decoration: none;
@@ -316,9 +323,9 @@ header {
         height: 70px;
         object-fit: contain;
         transition: $transition;
-        @media (max-width: 768px) {
-          height: 60px;
-        }
+        // @media (max-width: 768px) {
+        //   height: 60px;
+        // }
       }
       .logoWhite {
         display: none;
@@ -432,8 +439,9 @@ header {
             justify-content: center;
           }
           .btn {
-            background-color: $mainColor;
+            background-color: $secondColor;
             color: $white-color;
+            border: 2px solid $mainColor;
           }
         }
       }
@@ -1009,8 +1017,8 @@ header {
   background: linear-gradient(0deg, #2c91936d 10%, #2c9193e7 90%),
     url(../img/about.jpg);
   background-size: cover;
-  padding-top: 180px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1023,6 +1031,7 @@ header {
     font-weight: bold;
     color: $white-color;
     font-size: 40px !important;
+    padding-top: 50px;
     @media (max-width: 768px) {
       font-size: 30px !important;
     }
@@ -1069,19 +1078,18 @@ header {
     align-items: center;
     gap: 8px;
     i {
-      font-size: 24px;
+      font-size: 20px;
       color: $secondColor;
     }
   }
-  input{
+  input {
     min-height: 56px;
-
+    min-width: 150px;
   }
-  ::placeholder{
+  ::placeholder {
     font-size: 13px;
   }
 }
-
 .trackOrder {
   padding: 50px 0;
   img {
@@ -1089,11 +1097,11 @@ header {
     // width: 100%;
     display: block;
     object-fit: contain;
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       height: 200px;
     }
   }
-  form{
+  form {
     background-color: $white-color;
     border-radius: 16px;
     display: flex;
@@ -1104,16 +1112,106 @@ header {
     width: 100%;
   }
 }
-
-.formWimg{
+.formWimg {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 }
+
+.authPages {
+  padding: 30px 0;
+  .row {
+    max-width: 1000px;
+    margin: auto;
+  }
+  form {
+    background-color: $white-color;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .pageImg {
+    width: 100%;
+    object-fit: contain;
+    max-height: 400px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+   
+
+    .links {
+      display: flex;
+      align-items: flex-end;
+      width: calc(100% - 40px);
+      justify-content: center;
+      gap: 24px;
+      border-bottom: 2px solid #dddddd;
+      .link {
+        color: $black-color;
+        font-weight: bold;
+        padding-bottom: 20px;
+        position: relative;
+        font-size: 18px ;
+        @media (max-width: 768px) {
+          font-size: 16px ;
+        }
+
+        &.active {
+          color: $secondColor;
+          font-weight: bold;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background-color: $secondColor;
+          }
+        }
+      }
+    }
+    p{
+      color: $text-color;
+    }
+
+    .logo {
+      img {
+        height: 100px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.otp{
+  padding: 50px 0;
+  text-align: center;
+  form{
+    max-width: 500px;
+    margin: auto;
+    img{
+      max-height: 200px !important;
+    }
+    input{
+      text-align: center;
+    }
+  }
+}
+
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
@@ -1137,89 +1235,89 @@ header {
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
-// /* PC device :991px. */
-// @media (min-width: 991px) {
-//   body {
-//     font-size: 14px !important;
-//   }
-//   h1 {
-//     font-size: 26px !important;
-//   }
-//   h2 {
-//     font-size: 24px !important;
-//   }
-//   h3 {
-//     font-size: 20px !important;
-//   }
-//   h4 {
-//     font-size: 18px !important;
-//   }
-//   h5 {
-//     font-size: 16px !important;
-//   }
-//   h6 {
-//     font-size: 15px !important;
-//   }
-//   a,
-//   p {
-//     font-size: 14px !important;
-//   }
-// }
+/* PC device :991px. */
+@media (min-width: 991px) {
+  body {
+    font-size: 14px ;
+  }
+  h1 {
+    font-size: 26px ;
+  }
+  h2 {
+    font-size: 24px ;
+  }
+  h3 {
+    font-size: 20px ;
+  }
+  h4 {
+    font-size: 18px ;
+  }
+  h5 {
+    font-size: 16px ;
+  }
+  h6 {
+    font-size: 15px ;
+  }
+  a,
+  p {
+    font-size: 14px ;
+  }
+}
 /* Tablet device :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Global */
   body {
-    font-size: 14px !important;
+    font-size: 14px ;
   }
   h1 {
-    font-size: 26px !important;
+    font-size: 26px ;
   }
   h2 {
-    font-size: 22px !important;
+    font-size: 22px ;
   }
   h3 {
-    font-size: 20px !important;
+    font-size: 20px ;
   }
   h4 {
-    font-size: 18px !important;
+    font-size: 18px ;
   }
   h5 {
-    font-size: 16px !important;
+    font-size: 16px ;
   }
   h6 {
-    font-size: 15px !important;
+    font-size: 15px ;
   }
   a,
   p {
-    font-size: 14px !important;
+    font-size: 14px ;
   }
 }
 /* small mobile :320px. */
 @media (max-width: 767px) {
   /* Global */
   body {
-    font-size: 13px !important;
+    font-size: 13px ;
   }
   h1 {
-    font-size: 23px !important;
+    font-size: 23px ;
   }
   h2 {
-    font-size: 19px !important;
+    font-size: 19px ;
   }
   h3 {
-    font-size: 18px !important;
+    font-size: 18px ;
   }
   h4 {
-    font-size: 17px !important;
+    font-size: 17px ;
   }
   h5 {
-    font-size: 16px !important;
+    font-size: 16px ;
   }
   h6 {
-    font-size: 15px !important;
+    font-size: 15px ;
   }
   a,
   p {
-    font-size: 14px !important;
+    font-size: 14px ;
   }
 }

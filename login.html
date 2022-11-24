@@ -42,31 +42,56 @@
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
     <!-- banner -->
-    <div class="banner">
-      <h1> تتبع طلبك </h1>
-      <ul>
-        <li> <a href="index.html">الرئيسية </a> </li>
-        <li> <a href="#!" class="active"> تتبع طلبك </a> </li>
-      </ul>
-    </div>
-    <!-- Track your order -->
-    <section class="trackOrder">
+    <div class="banner"> </div>
+    <!-- authPages -->
+    <section class="authPages">
       <div class="container">
-        <div class="formWimg">
-          <form action="">
-            <div class="inputField">
-              <label for="track">
-                <i class="ri-map-pin-range-fill"></i>
-                ادخل رقم الطلب
-              </label>
-              <input id="track" type="text" class="form-control" placeholder=" ادخل هنا ">
+        <div class="row align-items-end g-4">
+          <div class="col-lg-7">
+            <div class="info">
+              <div class="links">
+                <a class="link active" href="login.html"> تسجيل الدخول </a>
+                <a class="link" href="register.html"> انشاء حساب </a>
+              </div>
+              <p> سجل دخول الآن واطلب العمالة التي تريدها </p>
             </div>
-            <button class="btn btn-success" type="submit"> تتبع </button>
-          </form>
-          <img src="img/steps.svg" alt="">
+            <form action="">
+              <!-- inputField -->
+              <div class="inputField">
+                <label for="phone">
+                  <i class="ri-phone-fill"></i>
+                  رقم الهاتف
+                </label>
+                <input id="phone" type="number" class="form-control" placeholder=" ادخل رقم الهاتف ">
+              </div>
+              <!-- inputField -->
+              <div class="inputField">
+                <label for="password">
+                  <i class="ri-lock-fill"></i>
+                  كلمة المرور
+                </label>
+                <input id="password" type="password" class="form-control" placeholder=" ****** ">
+              </div>
+              <!-- inputField -->
+              <div class="d-flex justify-content-between ">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="remember">
+                  <label class="form-check-label" for="remember"> تذكرني </label>
+                </div>
+                <a href="forget-password.html"> لقد نسيت الرقم السري؟ </a>
+              </div>
+              <button class="btn btn-success" type="submit"> دخول </button>
+            </form>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <img class="pageImg" src="img/login.svg" alt="">
+          </div>
+
         </div>
       </div>
     </section>
+
+
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->

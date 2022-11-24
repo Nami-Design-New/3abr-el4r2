@@ -42,31 +42,71 @@
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
     <!-- banner -->
-    <div class="banner">
-      <h1> تتبع طلبك </h1>
-      <ul>
-        <li> <a href="index.html">الرئيسية </a> </li>
-        <li> <a href="#!" class="active"> تتبع طلبك </a> </li>
-      </ul>
-    </div>
-    <!-- Track your order -->
-    <section class="trackOrder">
+    <div class="banner"> </div>
+    <!-- authPages -->
+    <section class="authPages">
       <div class="container">
-        <div class="formWimg">
-          <form action="">
-            <div class="inputField">
-              <label for="track">
-                <i class="ri-map-pin-range-fill"></i>
-                ادخل رقم الطلب
-              </label>
-              <input id="track" type="text" class="form-control" placeholder=" ادخل هنا ">
+        <div class="row align-items-end g-4">
+          <div class="col-lg-7">
+            <div class="info">
+              <div class="links">
+                <a class="link" href="login.html"> تسجيل الدخول </a>
+                <a class="link active" href="register.html"> انشاء حساب </a>
+              </div>
+              <p> انشئ حساب واستمتع بخدماتنا ... </p>
             </div>
-            <button class="btn btn-success" type="submit"> تتبع </button>
-          </form>
-          <img src="img/steps.svg" alt="">
+            <form action="otp.html">
+              <!-- inputField -->
+              <div class="inputField">
+                <label for="name">
+                  <i class="ri-user-3-fill"></i>
+                  اسم المستخدم
+                </label>
+                <input id="name" type="text" class="form-control" placeholder=" ادخل الاسم بالكامل ">
+              </div>
+              <!-- inputField -->
+              <div class="inputField">
+                <label for="phone">
+                  <i class="ri-phone-fill"></i>
+                  رقم الهاتف
+                </label>
+                <input id="phone" type="number" class="form-control" placeholder=" ادخل رقم الهاتف ">
+              </div>
+
+              <div class="row flex-wrap" style="gap:24px;">
+                <div class="col p-0">
+                  <!-- inputField -->
+                  <div class="inputField">
+                    <label for="password">
+                      <i class="ri-lock-fill"></i>
+                      كلمة المرور
+                    </label>
+                    <input id="password" type="password" class="form-control" placeholder=" ****** ">
+                  </div>
+                </div>
+                <div class="col p-0">
+                  <!-- inputField -->
+                  <div class="inputField">
+                    <label for="confirmPassword">
+                      <i class="ri-lock-fill"></i>
+                     تاكيد كلمة المرور
+                    </label>
+                    <input id="confirmPassword" type="password" class="form-control" placeholder=" ****** ">
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-success" type="submit"> انشاء </button>
+            </form>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <img class="pageImg" src="img/register.svg" alt="">
+          </div>
+
         </div>
       </div>
     </section>
+
+
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
