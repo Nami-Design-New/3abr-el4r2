@@ -290,6 +290,10 @@ span.select2.select2-container.select2-container--default {
   direction: ltr !important;
 }
 
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.8;
+}
+
 .btn {
   padding: 8px 16px;
   border-radius: 8px;
@@ -1285,10 +1289,6 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 .otp form input {
   text-align: center;
-}
-
-.modal-backdrop {
-  --bs-backdrop-opacity: 0.8;
 }
 
 .worker {

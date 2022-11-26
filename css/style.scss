@@ -279,6 +279,9 @@ span.select2.select2-container.select2-container--default {
 .odometer-inside {
   direction: ltr !important;
 }
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.8;
+}
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -1206,8 +1209,7 @@ header {
     }
   }
 }
-.modal-backdrop {
-  --bs-backdrop-opacity: 0.8;
+.allWorkers {
 }
 .worker {
   position: relative;
@@ -1266,7 +1268,7 @@ header {
       width: 100%;
       aspect-ratio: 6 / 7;
       @media (max-width: 992px) {
-              object-fit: contain;
+        object-fit: contain;
       }
       border-radius: 8px;
       max-height: 300px;
@@ -1274,7 +1276,6 @@ header {
       border-radius: 8px;
       border: 1px solid $body-color;
       cursor: zoom-in;
-      
     }
   }
   .moreImgs {
@@ -1382,6 +1383,10 @@ header {
 .fancybox__container {
   z-index: 1999;
 }
+
+
+
+
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
