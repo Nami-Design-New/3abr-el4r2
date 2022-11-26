@@ -1346,6 +1346,9 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 .cv .mainImg img {
   width: 100%;
   height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #f3f3f9;
   border-radius: 8px;
   border: 1px solid #f3f3f9;
 }
@@ -1355,7 +1358,10 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   gap: 8px;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f3f3f9;
 }
 .cv .moreImgs img {
   width: 100%;
@@ -1364,7 +1370,6 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   border-radius: 4px;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 1px solid #f3f3f9;
 }
 .cv .info {
   display: flex;
@@ -1389,7 +1394,12 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   flex-direction: column;
   gap: 4px;
   border-radius: 4px;
-  min-width: 145px;
+  min-width: 160px;
+}
+@media (max-width: 768px) {
+  .cv .info ul li {
+    min-width: 140px;
+  }
 }
 .cv .info ul li .title {
   color: #777;
@@ -1442,6 +1452,11 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   flex-wrap: wrap;
   padding: 0;
   padding-top: 20px;
+}
+.cvModal .modal-footer .btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .fancybox__container {

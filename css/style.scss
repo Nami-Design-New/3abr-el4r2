@@ -1291,7 +1291,8 @@ header {
     img {
       width: 100%;
       height: 300px;
-      // object-fit: contain;
+      object-fit: contain;
+      background-color: $body-color;
       border-radius: 8px;
       border: 1px solid $body-color;
     }
@@ -1302,14 +1303,17 @@ header {
     gap: 8px;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: $body-color;
+
     img {
       width: 100%;
       max-width: 70px;
       height: 70px;
       border-radius: 4px;
       object-fit: cover;
-      border: 1px solid $body-color;
     }
   }
 
@@ -1334,7 +1338,10 @@ header {
         flex-direction: column;
         gap: 4px;
         border-radius: 4px;
-        min-width: 145px;
+        min-width: 160px;
+        @media (max-width: 768px) {
+          min-width: 140px;
+        }
 
         .title {
           color: #777;
@@ -1387,6 +1394,11 @@ header {
     flex-wrap: wrap;
     padding: 0;
     padding-top: 20px;
+    .btn{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
   }
 }
 .fancybox__container {
