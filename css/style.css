@@ -1513,7 +1513,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
   color: #231f20;
   border-radius: 16px;
-  margin-bottom: 20px;
+  margin: 30px 0;
   cursor: pointer;
 }
 @media (min-width: 992px) {
@@ -1544,6 +1544,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   flex-direction: column;
   gap: 24px;
   transition: all 0.3s ease-in-out;
+  max-width: 300px;
 }
 .side .accordionItem {
   display: flex;

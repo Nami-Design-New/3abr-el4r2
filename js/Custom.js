@@ -104,6 +104,13 @@ $(document).ready(function () {
   $(".hideSide").click(function () {
     $(".allWorkers .side").toggleClass("showSide");
   });
+
+  $(document).mouseup(function (e) {
+    var targetedDiv = $(".allWorkers .side");
+    if (!targetedDiv.is(e.target) && targetedDiv.has(e.target).length === 0) {
+      targetedDiv.removeClass("showSide");
+    }
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
