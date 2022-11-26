@@ -292,7 +292,7 @@ span.select2.select2-container.select2-container--default {
 
 .btn {
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -1289,7 +1289,6 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 
 .modal-backdrop {
   --bs-backdrop-opacity: 0.8;
-  transition: all 0.3s ease-in-out;
 }
 
 .worker {
@@ -1326,9 +1325,9 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   justify-content: center;
   align-items: center;
   border-radius: 8px 8px 100% 100%;
-  border: 1px solid #198587;
-  background-color: #f3f3f9;
-  color: #198587;
+  border: 1px solid #6cafb0;
+  background-color: #198587;
+  color: #ffffff;
   padding: 8px 20px 16px;
   z-index: 2;
   text-align: center;
@@ -1345,12 +1344,19 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 .cv .mainImg img {
   width: 100%;
-  height: 300px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  aspect-ratio: 6/7;
+  border-radius: 8px;
+  max-height: 300px;
   background-color: #f3f3f9;
   border-radius: 8px;
   border: 1px solid #f3f3f9;
+  cursor: zoom-in;
+}
+@media (max-width: 992px) {
+  .cv .mainImg img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 .cv .moreImgs {
   display: flex;
@@ -1370,6 +1376,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   border-radius: 4px;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: zoom-in;
 }
 .cv .info {
   display: flex;

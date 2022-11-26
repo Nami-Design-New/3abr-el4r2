@@ -8,7 +8,6 @@ $text-color: #555555;
 $transition: all 0.3s ease-in-out;
 $shadow: 0px 2px 4px #00000020;
 $BigShadow: 0px 8px 24px #00000020;
-
 @font-face {
   font-family: SF_Regular;
   font-display: swap;
@@ -292,7 +291,7 @@ span.select2.select2-container.select2-container--default {
 /////////////////////////////////////////////////////////////////////////////////////////
 .btn {
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: $transition;
   // clip-path: polygon(
   //   10px 0,
@@ -309,7 +308,6 @@ span.select2.select2-container.select2-container--default {
   //   );
   // }
 }
-
 .btn-outline-success {
   border-color: $secondColor;
   color: $secondColor;
@@ -814,10 +812,8 @@ header {
     }
   }
 }
-
 .requirements {
   padding: 50px 0;
-
   .requirement {
     background: linear-gradient(-45deg, #2c9193, #00595b);
     height: 100%;
@@ -846,7 +842,6 @@ header {
       gap: 32px 20px;
       flex-wrap: wrap;
       padding-top: 16px;
-
       li {
         display: flex;
         align-items: center;
@@ -874,11 +869,9 @@ header {
     }
   }
 }
-
 .testimonials {
   padding: 70px 0;
   background-color: $white-color;
-
   .testimonialsSlider {
     padding-top: 40px;
   }
@@ -928,13 +921,11 @@ header {
     }
   }
 }
-
 .contactUs {
   padding: 70px 0;
   @media (max-width: 768px) {
     padding: 40px 0;
   }
-
   form {
     box-shadow: $shadow;
     background-color: $white-color;
@@ -953,7 +944,6 @@ header {
       }
     }
   }
-
   .contactInfo {
     height: 100%;
     display: flex;
@@ -1003,7 +993,6 @@ header {
     min-height: 250px;
   }
 }
-
 .faq {
   padding: 40px 0;
   .accordion {
@@ -1030,7 +1019,6 @@ header {
     }
   }
 }
-
 .banner {
   background: linear-gradient(0deg, #2c91936d 10%, #2c9193e7 90%),
     url(../img/about.jpg);
@@ -1044,7 +1032,6 @@ header {
   align-items: center;
   background-attachment: fixed;
   text-align: center;
-
   h1 {
     font-weight: bold;
     color: $white-color;
@@ -1054,7 +1041,6 @@ header {
       font-size: 30px !important;
     }
   }
-
   ul {
     display: flex;
     align-items: center;
@@ -1080,7 +1066,6 @@ header {
         left: -5px;
         top: calc(50% - 1px);
       }
-
       a {
         color: $white-color;
       }
@@ -1139,7 +1124,6 @@ header {
     flex-direction: column;
   }
 }
-
 .authPages {
   padding: 30px 0;
   .row {
@@ -1154,13 +1138,11 @@ header {
     gap: 24px;
     padding: 20px;
   }
-
   .pageImg {
     width: 100%;
     object-fit: contain;
     max-height: 400px;
   }
-
   .info {
     display: flex;
     flex-direction: column;
@@ -1168,7 +1150,6 @@ header {
     gap: 16px;
     margin-bottom: 20px;
     text-align: center;
-
     .links {
       display: flex;
       align-items: flex-end;
@@ -1185,7 +1166,6 @@ header {
         @media (max-width: 768px) {
           font-size: 16px;
         }
-
         &.active {
           color: $secondColor;
           font-weight: bold;
@@ -1204,7 +1184,6 @@ header {
     p {
       color: $text-color;
     }
-
     .logo {
       img {
         height: 100px;
@@ -1213,7 +1192,6 @@ header {
     }
   }
 }
-
 .otp {
   padding: 50px 0;
   text-align: center;
@@ -1230,9 +1208,7 @@ header {
 }
 .modal-backdrop {
   --bs-backdrop-opacity: 0.8;
-  transition: $transition;
 }
-
 .worker {
   position: relative;
   display: block;
@@ -1267,9 +1243,9 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 8px 8px 100% 100%;
-    border: 1px solid $secondColor;
-    background-color: $body-color;
-    color: $secondColor;
+    border: 1px solid $mainColor;
+    background-color: $secondColor;
+    color: $white-color;
     padding: 8px 20px 16px;
     z-index: 2;
     text-align: center;
@@ -1280,21 +1256,25 @@ header {
     }
   }
 }
-
 .cv {
   position: relative;
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-
   .mainImg {
     img {
       width: 100%;
-      height: 300px;
-      object-fit: contain;
+      aspect-ratio: 6 / 7;
+      @media (max-width: 992px) {
+              object-fit: contain;
+      }
+      border-radius: 8px;
+      max-height: 300px;
       background-color: $body-color;
       border-radius: 8px;
       border: 1px solid $body-color;
+      cursor: zoom-in;
+      
     }
   }
   .moreImgs {
@@ -1307,16 +1287,15 @@ header {
     padding: 8px;
     border-radius: 8px;
     background-color: $body-color;
-
     img {
       width: 100%;
       max-width: 70px;
       height: 70px;
       border-radius: 4px;
       object-fit: cover;
+      cursor: zoom-in;
     }
   }
-
   .info {
     display: flex;
     flex-direction: column;
@@ -1342,7 +1321,6 @@ header {
         @media (max-width: 768px) {
           min-width: 140px;
         }
-
         .title {
           color: #777;
           white-space: nowrap;
@@ -1394,7 +1372,7 @@ header {
     flex-wrap: wrap;
     padding: 0;
     padding-top: 20px;
-    .btn{
+    .btn {
       display: flex;
       align-items: center;
       gap: 8px;
