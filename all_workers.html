@@ -42,88 +42,204 @@
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
     <!-- banner -->
-    <div class="banner"> </div>
+    <div class="banner">
+      <h1> طلب استقدام </h1>
+      <ul>
+        <li> <a href="index.html">الرئيسية </a> </li>
+        <li> <a href="#!" class="active"> طلب استقدام </a> </li>
+      </ul>
+    </div>
     <!-- all workers -->
     <section class="allWorkers">
       <div class="container">
-        <div class="row g-2">
-          <div class="col-lg-3">
-            
+        <div class="row">
+          <div class="col-lg-3 p-0 p-lg-2">
+            <form class="side">
+              <!--side Control  in small media -->
+              <div class="hideSide">
+                <h4> تصفية النتائج </h4>
+                <span class="icon"> <i class="ri-close-line"></i> </span>
+              </div>
+              <!-- item -->
+              <div class="accordionItem">
+                <!-- accordion Button -->
+                <button class="accordionButton" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#nationalityFilter">
+                  الجنسية
+                  <sapn class="plus"></sapn>
+                </button>
+                <!-- accordion data -->
+                <div id="nationalityFilter" class="collapse show">
+                  <div class="accordionData">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="nationality" id="nationality1">
+                      <label class="form-check-label" for="nationality1"> الهند </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="nationality" id="nationality2">
+                      <label class="form-check-label" for="nationality2"> اوغندا </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="nationality" id="nationality3">
+                      <label class="form-check-label" for="nationality3"> بنجلادش </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="nationality" id="nationality4">
+                      <label class="form-check-label" for="nationality4">الفلبين</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="nationality" id="nationality5">
+                      <label class="form-check-label" for="nationality5"> موريتانيا </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="nationality" id="nationality6">
+                      <label class="form-check-label" for="nationality6"> جيبوتي </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="accordionItem">
+                <!-- accordion Button -->
+                <button class="accordionButton" type="button" data-bs-toggle="collapse" data-bs-target="#jobFliter">
+                  المهنة
+                  <sapn class="plus"></sapn>
+                </button>
+                <!-- accordion data -->
+                <div id="jobFliter" class=" collapse show">
+                  <div class="accordionData">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="job" id="job1">
+                      <label class="form-check-label" for="job1"> عاملة منزلية </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="job" id="job2">
+                      <label class="form-check-label" for="job2"> سائق خاص </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="accordionItem">
+                <!-- accordion Button -->
+                <button class="accordionButton" type="button" data-bs-toggle="collapse" data-bs-target="#ageFliter">
+                  العمر
+                  <sapn class="plus"></sapn>
+                </button>
+                <!-- accordion data -->
+                <div id="ageFliter" class=" collapse show">
+                  <div class="accordionData">
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="age" id="age1">
+                      <label class="form-check-label" for="age1"> من 20 الي 30 </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="age" id="age2">
+                      <label class="form-check-label" for="age2"> من 31 الي 40 </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="age" id="age3">
+                      <label class="form-check-label" for="age3"> من 41 الي 50 </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control">
+                <button class="btn btn-outline-success" type="button"> اعادة تهيئة </button>
+                <button class="btn btn-success" type="submit"> تاكيد </button>
+
+              </div>
+            </form>
           </div>
-          <div class="col-lg-9">
-            <div class="row">
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv1.png" alt="">
-                  <span class="job"> عاملة منزلية </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv2.png" alt="">
-                  <span class="job"> سائق خاص </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-            
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv1.png" alt="">
-                  <span class="job"> عاملة منزلية </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv2.png" alt="">
-                  <span class="job"> سائق خاص </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-            
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv1.png" alt="">
-                  <span class="job"> عاملة منزلية </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv2.png" alt="">
-                  <span class="job"> سائق خاص </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-            
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv1.png" alt="">
-                  <span class="job"> عاملة منزلية </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv2.png" alt="">
-                  <span class="job"> سائق خاص </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-              <div class="col-6 col-md-4  p-2">
-                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
-                  <img src="img/cv2.png" alt="">
-                  <span class="job"> سائق خاص </span>
-                  <span class="more"> التفاصيل </span>
-                </a>
-              </div>
-            
-
+          <div class="col-lg-9 p-0 p-lg-2">
+            <!-- show filter in small media -->
+            <div class="hideSide">
+              <h4> تصفية النتائج </h4>
+              <span class="icon"> <i class="ri-equalizer-line"></i> </span>
             </div>
-            <!-- cv -->
 
-
+            <div class="row">
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv1.png" alt="">
+                  <span class="job"> عاملة منزلية </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv2.png" alt="">
+                  <span class="job"> سائق خاص </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv1.png" alt="">
+                  <span class="job"> عاملة منزلية </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv2.png" alt="">
+                  <span class="job"> سائق خاص </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv1.png" alt="">
+                  <span class="job"> عاملة منزلية </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv2.png" alt="">
+                  <span class="job"> سائق خاص </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv1.png" alt="">
+                  <span class="job"> عاملة منزلية </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv2.png" alt="">
+                  <span class="job"> سائق خاص </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+              <div class="col-6 col-md-4 p-2" data-aos="fade-down">
+                <a href="#!" class="worker" data-bs-toggle="modal" data-bs-target=".cvModal">
+                  <img src="img/cv2.png" alt="">
+                  <span class="job"> سائق خاص </span>
+                  <span class="more"> التفاصيل </span>
+                </a>
+              </div>
+            </div>
+            <!-- pagination  -->
+            <nav class="customPagination">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <span class="page-link"> السابق </span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">2</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">التالي </a>
+                </li>
+              </ul>
+            </nav>
             <!-- Modal -->
             <div class="modal fade cvModal" tabindex="-1">
               <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -132,7 +248,6 @@
                     <i class="ri-close-line"></i>
                   </button>
                   <div class="modal-body p-0">
-
                     <div class="cv">
                       <div class="row">
                         <div class="col-lg-4 p-2">
@@ -148,7 +263,6 @@
                             <a data-fancybox="user1-CV" href="img/cv2.webp">
                               <img src="img/cv2.webp" alt="">
                             </a>
-                         
                           </div>
                         </div>
                         <div class="col-lg-8 p-2">
@@ -187,21 +301,20 @@
                           </div>
                         </div>
                       </div>
-
                     </div>
-
                   </div>
                   <div class="modal-footer">
-                    <a href="#!" class="btn btn-outline-success"> <i class="ri-download-cloud-fill"></i> تنزيل السيرة الذاتية </a>
+                    <a href="#!" class="btn btn-outline-success"> <i class="ri-download-cloud-fill"></i> تنزيل السيرة
+                      الذاتية </a>
                     <a href="#!" class="btn btn-success"><i class="ri-briefcase-fill"></i> احجز السيرة الذاتية </a>
                   </div>
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
+
+
       </div>
     </section>
   </content>

@@ -100,6 +100,10 @@ $(document).ready(function () {
     observer: true,
     observeParents: true,
   });
+
+  $(".hideSide").click(function () {
+    $(".allWorkers .side").toggleClass("showSide");
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
