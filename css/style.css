@@ -1380,14 +1380,16 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   padding: 0;
   margin: 0;
   border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 16px;
 }
 .cv .info ul li {
   display: inline-flex;
   flex-direction: column;
   gap: 4px;
   border-radius: 4px;
-  min-width: 120px;
-  margin: 10px;
+  min-width: 145px;
 }
 .cv .info ul li .title {
   color: #777;
@@ -1438,7 +1440,8 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 0;
+  padding: 0;
+  padding-top: 20px;
 }
 
 .fancybox__container {
