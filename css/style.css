@@ -1513,7 +1513,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
   color: #231f20;
   border-radius: 16px;
-  margin: 30px 0;
+  margin-bottom: 30px;
   cursor: pointer;
 }
 @media (min-width: 992px) {
@@ -1646,6 +1646,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 
 .showSide {
   right: 0;
+  box-shadow: -245px 1px 10000px 20px rgba(35, 31, 32, 0.6705882353);
 }
 
 .customPagination {

@@ -1421,7 +1421,7 @@ header {
   box-shadow: $BigShadow;
   color: $black-color;
   border-radius: 16px;
-  margin: 30px 0;
+  margin-bottom: 30px ;
   cursor: pointer;
   @media (min-width: 992px) {
     display: none;
@@ -1558,6 +1558,7 @@ header {
 }
 .showSide {
   right: 0;
+  box-shadow: -245px 1px 10000px 20px #231f20ab;
 }
 
 .customPagination {
