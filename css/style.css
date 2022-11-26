@@ -291,7 +291,9 @@ span.select2.select2-container.select2-container--default {
 }
 
 .btn {
-  padding: 12px 24px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-outline-success {
@@ -313,7 +315,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 99;
   width: 100%;
 }
 header .navbar {
@@ -452,6 +454,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   background-color: #198587;
   color: #ffffff;
   border: 2px solid #6cafb0;
+  padding: 12px 24px;
 }
 .mainSlider .swiper-slide-active .sliderTitle {
   -webkit-animation: fadeInUp 1s 0.75s both;
@@ -1284,8 +1287,166 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   text-align: center;
 }
 
-/* PC device :991px. */
-@media (min-width: 991px) {
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.worker {
+  position: relative;
+  display: block;
+}
+.worker img {
+  width: 100%;
+  aspect-ratio: 6/7;
+  border-radius: 8px;
+  max-width: 400px;
+}
+.worker .more {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(25, 133, 135, 0.8901960784);
+  border-radius: 8px;
+  color: #ffffff;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.worker .job {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px 8px 100% 100%;
+  border: 1px solid #198587;
+  background-color: #f3f3f9;
+  color: #198587;
+  padding: 8px 20px 16px;
+  z-index: 2;
+  text-align: center;
+}
+.worker:hover span {
+  opacity: 1;
+}
+
+.cv {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.cv .mainImg img {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  border: 1px solid #f3f3f9;
+}
+.cv .moreImgs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.cv .moreImgs img {
+  width: 100%;
+  max-width: 70px;
+  height: 70px;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #f3f3f9;
+}
+.cv .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1;
+  margin: auto;
+  width: 100%;
+}
+.cv .info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 16px;
+}
+.cv .info ul li {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 4px;
+  min-width: 120px;
+  margin: 10px;
+}
+.cv .info ul li .title {
+  color: #777;
+  white-space: nowrap;
+}
+.cv .info ul li .data {
+  color: #231f20;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.cv .info .alertText {
+  color: red;
+}
+
+.cvModal {
+  padding-top: 24px;
+}
+.cvModal .modal-content {
+  border-radius: 24px;
+  padding: 24px;
+}
+@media (max-width: 768px) {
+  .cvModal .modal-content {
+    padding: 24px 12px;
+  }
+}
+.cvModal .closeBtn {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  background-color: #231f20;
+  border: 2px solid #ffffff;
+  border-radius: 100px;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  transform: translate(10px, -50%);
+}
+.cvModal .closeBtn i {
+  font-size: 24px;
+  color: #ffffff;
+}
+.cvModal .modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 0;
+}
+
+.fancybox__container {
+  z-index: 1999;
+}
+
+/* PC device :992px. */
+@media (min-width: 992px) {
   body {
     font-size: 14px;
   }
@@ -1313,7 +1474,7 @@ p {
   }
 }
 /* Tablet device :768px. */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   /* Global */
   body {
     font-size: 14px;
@@ -1342,7 +1503,7 @@ p {
   }
 }
 /* small mobile :320px. */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /* Global */
   body {
     font-size: 13px;
