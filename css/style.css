@@ -1697,6 +1697,13 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   align-items: center;
   gap: 24px;
 }
+@media (max-width: 768px) {
+  .cvPrint .mainInfo {
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 16px 64px 16px;
+  }
+}
 .cvPrint .mainInfo .userImg {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1711,6 +1718,11 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   flex-direction: column;
   gap: 24px;
 }
+@media (max-width: 768px) {
+  .cvPrint .mainInfo .sideData {
+    align-items: center;
+  }
+}
 .cvPrint .mainInfo .sideData .name {
   font-weight: bold;
   color: #198587;
@@ -1721,6 +1733,12 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   align-items: center;
   gap: 48px;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .cvPrint .mainInfo .sideData .topInfo {
+    justify-content: center;
+    gap: 16px;
+  }
 }
 .cvPrint .mainInfo .sideData .topInfo .info {
   display: flex;
@@ -1754,6 +1772,11 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+@media (max-width: 768px) {
+  .cvPrint .Percentages .percentDiv {
+    flex-direction: column;
+  }
 }
 .cvPrint .bottomInfo {
   position: relative;
@@ -1790,6 +1813,19 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 .cvPrint .bottomInfo .infoDiv .innerInfo .infoRow:last-child::before {
   display: none;
+}
+@media (max-width: 768px) {
+  .cvPrint .bottomInfo .infoDiv .innerInfo .infoRow:last-child {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px 4px 0 !important;
+  }
+  .cvPrint .bottomInfo .infoDiv .innerInfo .infoRow:nth-child(2)::before {
+    display: none;
+  }
 }
 .cvPrint .bottomInfo .infoDiv .innerInfo .infoRow .data {
   padding: 16px 4px;
