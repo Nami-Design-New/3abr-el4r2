@@ -1440,7 +1440,7 @@ header {
     }
   }
 }
-.side {
+.allWorkersSide {
   background-color: $white-color;
   padding: 20px;
   display: flex;
@@ -1861,6 +1861,78 @@ $PercentSize: 80px;
   @for $j from 1 through 100 {
     &.p#{$j} .bar {
       transform: rotate((360/100 * $j) + deg);
+    }
+  }
+}
+
+.profile {
+  padding: 24px 0;
+  .profileSide {
+    padding: 20px;
+    border-radius: 16px;
+    background-color: $white-color;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 80px;
+    z-index: 5;
+    min-height: 70vh;
+
+    .mainTitle{
+      font-weight: bold;
+      color: $text-color;
+      margin-bottom: 8px;
+    }
+
+    .userInfo{
+      background: linear-gradient(45deg, #2c9193dc , #2c9193f5 ),
+      url(../img/fav.svg);
+      background-repeat: no-repeat;
+      padding: 16px ;
+      border-radius: 12px;
+      color: $white-color;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .name{
+        font-weight: bold;
+      }
+
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      a {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: $black-color;
+        padding: 12px 0;
+        i {
+          font-size: 20px;
+          color: $secondColor;
+        }
+      }
+      
+    }
+    .logOut {
+      margin-top: auto;
+      text-align: center;
+      border: 1px solid red;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 8px;
+      color: $black-color;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      i {
+        color: red;
+        font-size: 20px;
+      }
     }
   }
 }

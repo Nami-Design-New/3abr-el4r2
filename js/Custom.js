@@ -102,7 +102,7 @@ $(document).ready(function () {
   });
 
   $(".hideSideBtn").click(function () {
-    $(".allWorkers .side").toggleClass("showSide");
+    $(".allWorkers .allWorkersSide").toggleClass("showSide");
   });
 
   // $(document).mouseup(function (e) {

@@ -1537,7 +1537,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   color: #231f20;
 }
 
-.side {
+.allWorkersSide {
   background-color: #ffffff;
   padding: 20px;
   display: flex;
@@ -1547,11 +1547,11 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   max-width: 300px;
   border-radius: 8px;
 }
-.side .accordionItem {
+.allWorkersSide .accordionItem {
   display: flex;
   flex-direction: column;
 }
-.side .accordionItem .accordionButton {
+.allWorkersSide .accordionItem .accordionButton {
   background-color: #ffffff;
   border: none;
   border-bottom: 1px solid #eee;
@@ -1560,7 +1560,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   font-weight: bold;
   position: relative;
 }
-.side .accordionItem .accordionButton::before {
+.allWorkersSide .accordionItem .accordionButton::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1571,14 +1571,14 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
-.side .accordionItem .accordionButton .plus {
+.allWorkersSide .accordionItem .accordionButton .plus {
   position: absolute;
   left: 8px;
   top: calc(50% - 12px);
   width: 24px;
   height: 24px;
 }
-.side .accordionItem .accordionButton .plus::before {
+.allWorkersSide .accordionItem .accordionButton .plus::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1590,7 +1590,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   transition: all 0.3s ease-in-out;
   background-color: #00595b;
 }
-.side .accordionItem .accordionButton .plus::after {
+.allWorkersSide .accordionItem .accordionButton .plus::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1603,30 +1603,30 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
   background-color: #00595b;
   transform: rotate(0deg);
 }
-.side .accordionItem .accordionButton.collapsed::before {
+.allWorkersSide .accordionItem .accordionButton.collapsed::before {
   width: 10px;
 }
-.side .accordionItem .accordionButton.collapsed .plus::after {
+.allWorkersSide .accordionItem .accordionButton.collapsed .plus::after {
   transform: rotate(90deg);
 }
-.side .accordionItem .accordionData {
+.allWorkersSide .accordionItem .accordionData {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding-top: 24px;
 }
-.side .control {
+.allWorkersSide .control {
   display: flex;
   gap: 8px;
   justify-content: center;
   padding-top: 24px;
   background-color: #ffffff;
 }
-.side .control .btn {
+.allWorkersSide .control .btn {
   width: 100%;
 }
 @media (max-width: 992px) {
-  .side {
+  .allWorkersSide {
     position: fixed;
     bottom: 0px;
     right: -100%;
@@ -1635,7 +1635,7 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
     height: calc(100vh - 60px);
     overflow: auto;
   }
-  .side .hideSideBtn {
+  .allWorkersSide .hideSideBtn {
     position: fixed;
     min-height: 60px;
     max-width: 300px;
@@ -2977,6 +2977,74 @@ header .navbar .navbar-nav .nav-item .nav-link.btn {
 }
 .percent.p100 .bar {
   transform: rotate(360deg);
+}
+
+.profile {
+  padding: 24px 0;
+}
+.profile .profileSide {
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  z-index: 5;
+  min-height: 70vh;
+}
+.profile .profileSide .mainTitle {
+  font-weight: bold;
+  color: #555555;
+  margin-bottom: 8px;
+}
+.profile .profileSide .userInfo {
+  background: linear-gradient(45deg, rgba(44, 145, 147, 0.862745098), rgba(44, 145, 147, 0.9607843137)), url(../img/fav.svg);
+  background-repeat: no-repeat;
+  padding: 16px;
+  border-radius: 12px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profile .profileSide .userInfo .name {
+  font-weight: bold;
+}
+.profile .profileSide .links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.profile .profileSide .links a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #231f20;
+  padding: 12px 0;
+}
+.profile .profileSide .links a i {
+  font-size: 20px;
+  color: #198587;
+}
+.profile .profileSide .logOut {
+  margin-top: auto;
+  text-align: center;
+  border: 1px solid red;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  color: #231f20;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.profile .profileSide .logOut i {
+  color: red;
+  font-size: 20px;
 }
 
 /* PC device :992px. */
