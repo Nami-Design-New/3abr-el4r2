@@ -46,25 +46,62 @@
     <!-- profile -->
     <section class="profile">
       <div class="container">
-        <div class="row">
-          <div class="col-md-3 p-2">
-            <div class="profileSide">
-              <h4 class="mainTitle"> حسابي </h4>
-              <div class="userInfo">
-                <h1 class="name"> محمود الكومي </h1>
-                <p class="phone"> +996 123456789 </p>
-              </div>
-              <div class="links">
-                <a href="profile_orders.html"> <i class="ri-suitcase-line"></i> طلباتي </a>
-                <a href="profile_notification.html"> <i class="ri-notification-2-line"></i> الاشعارات </a>
-                <a href="profile_edit.html"> <i class="ri-edit-box-line"></i> تعديل الحساب </a>
-              </div>
-              <a class="logOut" href="index.html"> <i class="ri-logout-circle-r-line"></i> تسجيل الخروج </a>
+        <!-- side -->
+        <div class="profileSide">
+          <div class="userInfo">
+            <h1 class="name"> عصام وليد</h1>
+            <p class="phone"> +996123456789 </p>
+          </div>
+          <div class="links">
+            <a href="profile_orders.html"> <i class="ri-suitcase-line"></i> طلباتي </a>
+            <a href="profile_notification.html"> <i class="ri-notification-2-line"></i> الاشعارات </a>
+            <a class="active" href="profile_edit.html"> <i class="ri-edit-box-line"></i> تعديل الحساب </a>
+            <a class="logOut" href="index.html"> <i class="ri-logout-circle-r-line"></i> تسجيل الخروج </a>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="profileContent">
+          <form class="editProfile" action="">
+            <!-- inputField -->
+            <div class="inputField">
+              <label for="name">
+                <i class="ri-user-3-fill"></i>
+                اسم المستخدم
+              </label>
+              <input id="name" type="text" class="form-control" placeholder=" ادخل الاسم بالكامل ">
             </div>
-          </div>
-          <div class="col-md-9 p-2">
-            <div class="profileContent"></div>
-          </div>
+            <!-- inputField -->
+            <div class="inputField">
+              <label for="phone">
+                <i class="ri-phone-fill"></i>
+                رقم الهاتف
+              </label>
+              <input id="phone" type="number" class="form-control" placeholder=" ادخل رقم الهاتف ">
+            </div>
+            <div class="row flex-wrap m-0" style="gap:24px;">
+              <div class="col p-0">
+                <!-- inputField -->
+                <div class="inputField">
+                  <label for="password">
+                    <i class="ri-lock-fill"></i>
+                    كلمة المرور
+                  </label>
+                  <input id="password" type="password" class="form-control" placeholder=" ****** ">
+                </div>
+              </div>
+              <div class="col p-0">
+                <!-- inputField -->
+                <div class="inputField">
+                  <label for="confirmPassword">
+                    <i class="ri-lock-fill"></i>
+                    تاكيد كلمة المرور
+                  </label>
+                  <input id="confirmPassword" type="password" class="form-control" placeholder=" ****** ">
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-success" type="submit"> تاكيد </button>
+          </form>
         </div>
       </div>
     </section>

@@ -1378,7 +1378,7 @@ header {
     z-index: 2;
     left: 0;
     top: 0;
-    background-color: $black-color;
+    background-color: $secondColor;
     border: 2px solid $white-color;
     border-radius: 100px;
     display: flex;
@@ -1864,75 +1864,216 @@ $PercentSize: 80px;
     }
   }
 }
-
 .profile {
-  padding: 24px 0;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
   .profileSide {
-    padding: 20px;
-    border-radius: 16px;
-    background-color: $white-color;
+    padding: 30px 0;
+    // background-color: $white-color;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    position: sticky;
-    top: 80px;
-    z-index: 5;
-    min-height: 70vh;
-
-    .mainTitle{
+    position: relative;
+    width: 260px;
+    min-height: calc(100vh - 90px);
+    &::after {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: #00595b20;
+      position: absolute;
+      left: -3px;
+      bottom: 50%;
+      transform: translateY(50%);
+      border-radius: 10px;
+    }
+    .mainTitle {
       font-weight: bold;
       color: $text-color;
       margin-bottom: 8px;
     }
-
-    .userInfo{
-      background: linear-gradient(45deg, #2c9193dc , #2c9193f5 ),
-      url(../img/fav.svg);
+    .userInfo {
+      background: linear-gradient(45deg, #2c9193dc, #2c9193f5),
+        url(../img/fav.svg);
       background-repeat: no-repeat;
-      padding: 16px ;
+      padding: 16px;
       border-radius: 12px;
       color: $white-color;
       display: flex;
       flex-direction: column;
       gap: 8px;
-      .name{
+      width: calc(100% - 10px);
+      .name {
         font-weight: bold;
       }
-
     }
     .links {
+      height: 100%;
       display: flex;
       flex-direction: column;
       gap: 4px;
+      flex: 1;
+      flex-wrap: wrap;
       a {
         display: flex;
         gap: 8px;
         align-items: center;
-        color: $black-color;
+        color: $text-color;
         padding: 12px 0;
+        position: relative;
         i {
           font-size: 20px;
+          color: $text-color;
+        }
+        &.active {
           color: $secondColor;
+          i {
+            color: $secondColor;
+          }
+          &::after {
+            content: "";
+            width: 4px;
+            height: 80%;
+            background-color: $secondColor;
+            position: absolute;
+            left: -3px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 10px;
+          }
         }
       }
-      
-    }
-    .logOut {
-      margin-top: auto;
-      text-align: center;
-      border: 1px solid red;
-      padding: 10px 20px;
-      text-align: center;
-      border-radius: 8px;
-      color: $black-color;
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      align-items: center;
-      i {
+      .logOut {
+        margin-top: auto;
         color: red;
-        font-size: 20px;
+        i {
+          color: red;
+        }
       }
+    }
+    @media (max-width: 992px) {
+      min-height: unset;
+      width: 100%;
+      &::after {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+      .userInfo {
+        width: 100%;
+      }
+      .links {
+        flex-direction: row;
+        a {
+          padding: 12px;
+          width: calc(50% - 2px);
+          border-radius: 8px;
+          &.active {
+            background-color: $secondColor;
+            color: $white-color;
+            i {
+              color: $white-color;
+            }
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .profileContent {
+    flex: 1;
+    min-height: 100px;
+    padding: 30px 0;
+    @media (max-width: 992px) {
+      padding: 0;
+    }
+    .cv {
+      background-color: $white-color;
+      border-radius: 8px;
+      box-shadow: $shadow;
+      .info {
+        height: 100%;
+        ul {
+          padding: 20px 0;
+        }
+        .control {
+          display: flex;
+          gap: 8px;
+          margin-top: auto;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: flex-end;
+          .btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+  .notifications {
+    padding: 10px;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .notification {
+        padding: 20px;
+        background-color: $white-color;
+        box-shadow: $shadow;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .notificationTitle {
+          font-weight: bold;
+        }
+        p {
+          color: $text-color;
+        }
+        .date {
+          display: flex;
+          font-size: small;
+          align-items: center;
+          gap: 16px;
+
+          span {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            color: $text-color;
+            i {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .editProfile{
+    background-color: $white-color;
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: $shadow;
+    .btn{
+      min-width: 200px;
+      margin: auto;
     }
   }
 }
