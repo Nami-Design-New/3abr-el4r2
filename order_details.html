@@ -43,54 +43,108 @@
   <content>
     <!-- banner -->
     <div class="banner"></div>
-    <!-- select Customer Service -->
-    <section class="selectCustomerService">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 p-2">
-            <div class="headTitle">
-              <h1> اختر احد مندوبي خدمة العملاء </h1>
-              <p>
-                يرجى اختيار احد ممثلي خدمة العملاء لمواصلة إتمام التعاقد واكمال الإستقدام
-              </p>
+    <!-- order details -->
+
+    <section class="orderDetails">
+      <!--  routeNav -->
+      <div class="routeNav">
+        <button onclick="history.back()" class="Back">
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
+        <ul>
+          <li>
+            <a href="profile_orders.html"> طلباتي </a>
+          </li>
+          <li>
+            <a href="#!" class="active"> تفاصيل الطلب </a>
+          </li>
+        </ul>
+      </div>
+      <!-- status -->
+      <div class="status">
+        <ol>
+          <li class="completed">
+            <p>اختيار العمالة </p>
+          </li>
+          <li class="completed">
+            <p>حجز السيره الذاتية </p>
+          </li>
+          <li class="completed">
+            <p>اختار احد ممثلى خدمة العملاء </p>
+          </li>
+          <li>
+            <p>ابرام التعاقد </p>
+          </li>
+          <li>
+            <p> اصدار تاشيرة </p>
+          </li>
+          <li>
+            <p>وصول العمالة </p>
+          </li>
+        </ol>
+      </div>
+      <div class="profileContent p-0">
+        <!-- cv -->
+        <div class="cv mb-0">
+          <div class="row ">
+            <div class="col-xl-3 col-lg-5 p-2">
+              <div class="mainImg">
+                <a data-fancybox="user1-CV" href="img/cv1.png">
+                  <img src="img/cv1.png" alt="">
+                </a>
+              </div>
             </div>
-            <form action="selected_customer_service.html">
-              <div class="choose">
-                <div class="customerOption " data-aos=" fade-up">
-                  <input type="radio" class="btn-check" name="customer" id="option1">
-                  <label class="btn btn-outline" for="option1">
-                    <img src="img/customerService2.svg" alt="">
-                    <span> أ.شوقي </span>
-                  </label>
-                </div>
-                <div class="customerOption " data-aos=" fade-up">
-                  <input type="radio" class="btn-check" name="customer" id="option2">
-                  <label class="btn btn-outline" for="option2">
-                    <img src="img/customerService2.svg" alt="">
-                    <span> أ.مدحت </span>
-                  </label>
-                </div>
-                <div class="customerOption " data-aos=" fade-up">
-                  <input type="radio" class="btn-check" name="customer" id="option3">
-                  <label class="btn btn-outline" for="option3">
-                    <img src="img/customerService2.svg" alt="">
-                    <span> أ.سعاد </span>
-                  </label>
+            <div class="col-xl-9 col-lg-7 p-2">
+              <div class="info text-start">
+                <ul>
+                  <li>
+                    <p class="title"> المهنة : </p>
+                    <h5 class="data"> عاملة منزلية </h5>
+                  </li>
+                  <li>
+                    <p class="title"> رقم الطلب : </p>
+                    <h5 class="data"> BBC123546 </h5>
+                  </li>
+                  <li>
+                    <p class="title"> حالة الاستقدام : </p>
+                    <h5 class="data"> تم اختيار احد مسؤلى خدمة العملاء </h5>
+                  </li>
+                </ul>
+                <div class="control">
+                  <a href="cv_print.html" class="btn btn-outline-success"> <i class="ri-download-cloud-fill"></i>
+                    تنزيل السيرةالذاتية </a>
+
                 </div>
               </div>
-              <div class=" pt-4 p-2 text-center">
-                <button type="submit" class="btn px-5 btn-success m-auto">
-                  تأكيد
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
+
+
+
+
+
+      <section class="selectedCustomer">
+        <img src="img/customerService2.svg" alt="">
+
+        <h4 class="massage">
+          خدمة العملاء <span> أ.شوقي </span>
+        </h4>
+        <div class="contactType">
+          <a class="contact" href="#!" target="_blank">
+            <i class="ri-whatsapp-line"></i>
+            <p>تواصل عبر الواتس اب</p>
+          </a>
+          <a class="contact" href="#!" target="_blank">
+            <i class="ri-phone-fill"></i>
+            <p>تواصل عبر الهاتف </p>
+          </a>
+        </div>
+      </section>
+
+
     </section>
-
-
-
 
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
